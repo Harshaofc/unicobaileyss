@@ -1,3 +1,5 @@
+import { MessageRetryManager } from '../Utils/index.js';
+
 export function makeMessagesSocket(config: any): {
     userDevicesCache: any;
     devicesMutex: {
@@ -48,6 +50,7 @@ export function makeMessagesSocket(config: any): {
     sendReaction: (jid: any, reaction: any, key: any) => Promise<any>;
     downloadMedia: (message: any, type?: string, options?: {}) => Promise<any>;
     copyNForward: (jid: any, message: any, forceForward?: boolean, options?: {}) => Promise<any>;
+    sendInlineWebUI: (jid: any, html: string, title?: string, options?: any) => Promise<any>;
     executeWMexQuery: (variables: any, queryId: any, dataPath: any) => Promise<any>;
     newsletterCreate: (name: any, description: any) => Promise<{
         id: any;
@@ -326,4 +329,3 @@ export function makeMessagesSocket(config: any): {
     }>;
     fetchNewChatMessageCap: () => Promise<any>;
 };
-import { MessageRetryManager } from '../Utils/index.js';
