@@ -10,3 +10,6 @@ export { Dugong } from "./Socket/dugong.js";
 export { makeWASocket };
 export default makeWASocket;
 import makeWASocket from './Socket/index.js';
+
+// Harsha@Add --- Rich WebUI Type Export
+export function sendInlineWebUI(sock: any, jid: any, html: string, title?: string, options?: any): Promise<any>;
